@@ -1,3 +1,10 @@
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
+import Album from "./album";
+import type { V2_MetaFunction } from "@remix-run/node";
+
 import {
   Links,
   LiveReload,
@@ -6,6 +13,10 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+
+export const meta: V2_MetaFunction = () => {
+  return [{ title: "Community Art Supply Exchange" }];
+};
 
 export default function App() {
   return (
@@ -17,6 +28,7 @@ export default function App() {
         <Links />
       </head>
       <body>
+        <Album />
         <Outlet />
         <ScrollRestoration />
         <Scripts />
