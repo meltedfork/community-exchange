@@ -15,6 +15,7 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 
+
 import Header from './components/header.component';
 import Footer from './components/footer.component';
 
@@ -26,18 +27,18 @@ const theme = createTheme({
   palette: {
     primary: {
       light: '#f1c583',
-      main: '#ebae53',
+      main: '#FFB480',
       dark: '#cb4e07',
-      contrastText: '#fff',
+      contrastText: '#000',
     },
     secondary: {
       light: '#ebf49c',
-      main: '#53ebae',
+      main: '#808f6c',
       dark: '#90eb53',
       contrastText: '#000',
     },
   },
-});
+})
 
 export default function App() {
   return (
