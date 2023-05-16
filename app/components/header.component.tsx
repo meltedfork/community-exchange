@@ -12,17 +12,18 @@ const Header = () => (
         <Typography variant="h6"
           align="left"
           sx={{ display: 'flex', alignItems: 'center' }}
-          color="inherit" noWrap>
+          color="inherit" position="relative" noWrap>
           Donate Supplies
         </Typography>
         <Typography variant="h5" 
           align="center"
-          sx={{ ml: 2.5, mr: 0.3 }} color="aqua" noWrap>
+          sx={{ ml: 2.5, mr: 0.3 }} color="inherit"
+          position="relative" noWrap>
           Community Art Supply Exchange
         </Typography>
-        <EventIcon sx={{ ml: 2.5, mr: 0.3 }} fontSize="inherit" />
+        <EventIcon sx={{ ml: 3.5, mr: 0.3 }} fontSize="inherit" />
         <Typography variant="h6" 
-          align="right"
+          align="right" position="relative"
           color="inherit" noWrap>
           Attend Events
         </Typography>
