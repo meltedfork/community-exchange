@@ -16,11 +16,8 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 
-import Header from './components/header.component';
-import Footer from './components/footer.component';
-import AppBar from './components/AppBar';
-import AppAppBar from './components/views/AppAppBar';
-import AppFooter from './components/views/AppFooter';
+import AppHeader from './views/AppHeader';
+import AppFooter from './views/AppFooter';
 
 export const meta: V2_MetaFunction = () => {
   return [{ title: "Community Art Supply Exchange" }];
@@ -59,10 +56,8 @@ export default function App() {
       <body style={{ zoom: 1 }}>
         <ThemeProvider theme={theme} >
           <CssBaseline />
-          <AppAppBar />
-          {/* <Header /> */}
+          <AppHeader />
           <Outlet />
-          {/* <Footer /> */}
           <AppFooter />
         </ThemeProvider>
         <ScrollRestoration />

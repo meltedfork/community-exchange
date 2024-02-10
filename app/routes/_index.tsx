@@ -3,7 +3,7 @@ import Card from '@mui/material/Card';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import { Fragment } from 'react';
-import ProductHero from '~/components/views/ProductHero';
+import ProductHero from '~/components/ProductHero';
 // TODO: upgrade npm=> npm install -g npm@10.0.0
 
 // import { ExternalScriptsFunction } from 'remix-utils';
@@ -77,6 +77,6 @@ export default function Index(): JSX.Element {
 };
 
 // extra text: Pick out something new from the Community Exchange
-  // Have leftover supplies from a craft that didn’t resonate with you?
-  // Drop off supplies to the Community Exchange for someone else to try
-  // Available items include paints, drawing supplies, wood, paper, fibers and more!
+// Have leftover supplies from a craft that didn’t resonate with you?
+// Drop off supplies to the Community Exchange for someone else to try
+// Available items include paints, drawing supplies, wood, paper, fibers and more!
