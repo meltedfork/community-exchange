@@ -1,7 +1,8 @@
+import MailChimpForm from "~/components/MailChimpForm";
 
 export default function Join(): JSX.Element {
 
   return (
-    <><p>Join our Mailing List</p><p>TODO: ADD MAILCHIMP INTEGRATION</p></>
+    <MailChimpForm />
   )
 }
