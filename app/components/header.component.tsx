@@ -5,30 +5,33 @@ import VolunteerActivismIcon from '@mui/icons-material/VolunteerActivism';
 import Typography from "@mui/material/Typography";
 
 const Header = () => (
-
-    <AppBar position="relative">
-      <Toolbar>
-        <VolunteerActivismIcon sx={{ mr: 0.3 }} fontSize="inherit"/> 
-        <Typography variant="h6"
-          align="left"
-          sx={{ display: 'flex', alignItems: 'center' }}
-          color="inherit" position="relative" noWrap>
-          Donate Supplies
-        </Typography>
-        <Typography variant="h5" 
-          align="center"
-          sx={{ ml: 2.5, mr: 0.3 }} color="inherit"
-          position="relative" noWrap>
-          Community Art Supply Exchange
-        </Typography>
-        <EventIcon sx={{ ml: 3.5, mr: 0.3 }} fontSize="inherit" />
-        <Typography variant="h6" 
-          align="right" position="relative"
-          color="inherit" noWrap>
-          Attend Events
-        </Typography>
-      </Toolbar>
-    </AppBar>
-  );
+  <>And this one
+    {/*
+  <AppBar position="fixed">
+    <Toolbar>
+      <VolunteerActivismIcon sx={{ mr: 0.3 }} fontSize="inherit" />
+      <Typography variant="h6"
+        align="left"
+        sx={{ display: 'flex', alignItems: 'center' }}
+        color="inherit" position="relative" noWrap>
+        Donate Supplies
+      </Typography>
+      <Typography variant="h5"
+        align="center"
+        sx={{ ml: 2.5, mr: 0.3 }} color="inherit"
+        position="relative" noWrap>
+        Community Art Supply Exchange
+      </Typography>
+      <EventIcon sx={{ ml: 3.5, mr: 0.3 }} fontSize="inherit" />
+      <Typography variant="h6"
+        align="right" position="relative"
+        color="inherit" noWrap>
+        Attend Events
+      </Typography>
+    </Toolbar>
+  </AppBar>
+  */}
+  </>
+);
 
 export default Header;
