@@ -7,7 +7,7 @@
     "dev:kill-port": "npx kill-port --port 3000",
     "dev:node": "cross-env NODE_ENV=development nodemon --require dotenv/config ./server.ts --watch ./server.ts",
     "dev:remix": "remix watch",
-    "start": "cross-env NODE_ENV=production node ./server.js",
+    "start": "cross-env NODE_ENV=production node ./server.ts",
     "typecheck": "tsc"
   },
   "dependencies": {
