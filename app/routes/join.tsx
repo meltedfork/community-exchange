@@ -1,8 +1,8 @@
-import MailChimpForm from "~/components/MailChimpForm";
+// import MailChimpForm from "~/components/MailChimpForm";
 
-export default function Join(): JSX.Element {
+// export default function Join(): JSX.Element {
 
-  return (
-    <MailChimpForm />
-  )
-}
+//   return (
+//     <MailChimpForm />
+//   )
+// }

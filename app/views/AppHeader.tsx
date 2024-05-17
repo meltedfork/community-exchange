@@ -34,14 +34,14 @@ function AppHeader() {
           >
             {'How to Donate'}
           </Link>
-          <Link
+          {/* <Link
             variant="h6"
             underline="none"
             href="/join"
             sx={{ ...rightLink, color: 'secondary.main' }}
           >
             {'Join our Mailing List'}
-          </Link>
+          </Link> */}
         </Box>
       </Toolbar>
     </AppBar>

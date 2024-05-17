@@ -23,16 +23,18 @@ export const meta: V2_MetaFunction = () => {
   return [{ title: "Community Art Supply Exchange" }];
 };
 
+const secondaryLightColor = '#fce79a';
+
 const theme = createTheme({
   palette: {
     primary: {
-      light: '#5c9ca3',
-      main: '#34848c',
+      light: '#c38d9e',
+      main: '#41B3A3',
       dark: '#026670',
       contrastText: '#fff',
     },
     secondary: {
-      light: '#fce79a',
+      light: secondaryLightColor,
       main: '#FCE181',
       dark: '#b09d5a',
       contrastText: '#000',
@@ -53,7 +55,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body style={{ zoom: 1 }}>
+      <body style={{ zoom: 1, backgroundColor: secondaryLightColor }}>
         <ThemeProvider theme={theme} >
           <CssBaseline />
           <AppHeader />

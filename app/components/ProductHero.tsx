@@ -10,7 +10,7 @@ export default function ProductHero() {
     <ProductHeroLayout
       sxBackground={{
         backgroundImage: `url(${backgroundImage})`,
-        backgroundColor: '#7fc7d9', // Average color of the background image.
+        backgroundColor: 'secondary.light', // Average color of the background image.
         backgroundPosition: 'center',
       }}
     >
@@ -36,7 +36,7 @@ export default function ProductHero() {
         variant="contained"
         size="large"
         component="a"
-        href="#"
+        href="/donate"
         sx={{ minWidth: 200 }}
       >
         Learn More
