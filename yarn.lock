@@ -3552,11 +3552,6 @@ hash-base@~3.0, hash-base@~3.0.4:
     inherits "^2.0.4"
     safe-buffer "^5.2.1"
 
-hash-wasm@^4.12.0:
-  version "4.12.0"
-  resolved "https://registry.yarnpkg.com/hash-wasm/-/hash-wasm-4.12.0.tgz#f9f1a9f9121e027a9acbf6db5d59452ace1ef9bb"
-  integrity sha512-+/2B2rYLb48I/evdOIhP+K/DD2ca2fgBjp6O+GBEnCDk2e4rpeXIK8GvIyRPjTezgmWn9gmKwkQjjx6BtqDHVQ==
-
 hash.js@^1.0.0, hash.js@^1.0.3:
   version "1.1.7"
   resolved "https://registry.npmjs.org/hash.js/-/hash.js-1.1.7.tgz"
@@ -7567,11 +7562,6 @@ xtend@^4.0.0, xtend@~4.0.1:
   version "4.0.2"
   resolved "https://registry.npmjs.org/xtend/-/xtend-4.0.2.tgz"
   integrity sha512-LKYU1iAXJXUgAXn9URjiu+MWhyUXHsvfp7mcuYm9dSUKK0/CjtrUwFAxD82/mCWbtLsGjFIad0wIsod4zrTAEQ==
-
-xxhash-addon@^2.0.3:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/xxhash-addon/-/xxhash-addon-2.0.3.tgz#699ad9aaed123fbb46a6829389799c056d49b716"
-  integrity sha512-MIL+yTvK2HaVHe1VXfVtXd884pakIaNbjuNHAqIhVFrye87+ZCn0s3RSafqiYB1ASqrZoGsm8URjPiupGLuP+A==
 
 y18n@^4.0.0:
   version "4.0.3"
