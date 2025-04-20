@@ -65,6 +65,7 @@
   --bs-body-bg: #fff;
   --bs-border-width: 1px;
   --bs-border-style: solid;
+  --bs-border-color: #dee2e6;
   --bs-border-color-translucent: rgba(0, 0, 0, 0.175);
   --bs-border-radius: 0.375rem;
   --bs-border-radius-sm: 0.25rem;
@@ -110,7 +111,7 @@ body {
 .header-blur-box {
   backdrop-filter: blur(0px);
   -webkit-backdrop-filter: blur(0px);
-  background-color: rgba(193, 190, 214, 0.8); /* Soft color, adjust as needed */
+  background-color: rgba(212, 210, 227, 0.889);
   border-radius: 3rem; /* Rounded corners */
   display: inline-block;
   padding: 3rem
@@ -122,7 +123,7 @@ body {
 
 .about-content {
   backdrop-filter: blur(25px);
-  background-color: rgba(193, 190, 214, 0.8);
+  background-color: rgba(212, 210, 227, 0.889);
   padding: 20px 48px;
 
 }
@@ -10848,6 +10849,10 @@ html {
   display: block;
   max-width: 30rem;
 }
+footer .copyright {
+  background-color: rgba(212, 210, 227, 0.889);
+  padding: 2rem;
+}
 
 footer.footer {
   padding-top: 5rem;
@@ -10882,7 +10887,7 @@ footer.footer .social-link:hover {
   height: auto;
   padding-top: 8rem;
   padding-bottom: 8rem;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../assets/img/bg-masthead.jpg");
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
