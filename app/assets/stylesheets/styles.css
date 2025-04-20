@@ -4019,6 +4019,7 @@ textarea.form-control-lg {
     padding-right: var(--bs-navbar-nav-link-padding-x);
     padding-left: var(--bs-navbar-nav-link-padding-x);
   }
+}
 
 .navbar-dark {
   --bs-navbar-color: rgba(255, 255, 255, 0.55);
