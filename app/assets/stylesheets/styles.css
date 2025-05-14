@@ -117,15 +117,15 @@ body {
   padding: 3rem
 }
 
-#abt-hdr {
-  padding: 20px;
+.about-header {
+  padding: 20px, 40px;
 }
 
 .about-content {
   backdrop-filter: blur(25px);
   background-color: rgba(212, 210, 227, 0.889);
-  padding: 20px 48px;
-
+  padding: 20px 40px;
+  width: fit-content;
 }
 
 hr {
@@ -10852,6 +10852,7 @@ html {
 footer .copyright {
   background-color: rgba(212, 210, 227, 0.889);
   padding: 2rem;
+  padding-bottom: 60px;
 }
 
 footer.footer {

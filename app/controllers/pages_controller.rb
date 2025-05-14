@@ -3,6 +3,10 @@ class PagesController < ApplicationController
   end
 
   def about
-    render "about"
+    render 'about'
+  end
+
+  def signup
+    render 'signup'
   end
 end
