@@ -124,11 +124,8 @@ body {
 .about-content {
   backdrop-filter: blur(25px);
   background-color: rgba(212, 210, 227, 0.889);
-  padding: 20px 48px;
-}
-
-.email-signup {
-
+  padding: 20px 40px;
+  width: fit-content;
 }
 
 hr {
