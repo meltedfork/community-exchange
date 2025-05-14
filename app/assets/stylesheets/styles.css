@@ -10852,6 +10852,7 @@ html {
 footer .copyright {
   background-color: rgba(212, 210, 227, 0.889);
   padding: 2rem;
+  padding-bottom: 60px;
 }
 
 footer.footer {
