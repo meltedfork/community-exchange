@@ -1,24 +1,18 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Useful commands
 
-Things you may want to cover:
+Stop db docker container:
 
-* Ruby version
+```
+docker ps -a
+docker stop <container-name>
+docker rm <container-name>
+```
 
-* System dependencies
+kill PIDs:
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+sudo lsof -i:5432
+sudo kill -15 <pid>
+```

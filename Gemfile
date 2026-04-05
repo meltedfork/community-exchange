@@ -8,9 +8,9 @@ gem 'rails', '~> 8.0.0', '>= 8.0.0'
 # Postgres database for Active Record
 gem 'pg', '~> 1.2'
 # Use Puma as the app server
-gem 'puma', '~> 5.0'
-# Use SCSS for stylesheets
-gem 'sass-rails', '>= 6'
+gem 'puma', '~> 6.0'
+# Replace sassc with dartsass 02-08-26
+gem 'dartsass-rails', '~> 0.5.0'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'webpacker', '~> 5.0'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
@@ -26,7 +26,7 @@ gem 'gibbon'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
-
+gem 'propshaft', '~> 0.8.0'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
@@ -56,4 +56,5 @@ group :test do
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+# updated platform to :windows
+gem 'tzinfo-data', platforms: [:windows, :jruby]
