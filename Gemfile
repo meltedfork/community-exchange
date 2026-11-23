@@ -8,7 +8,7 @@ gem 'rails', '~> 8.0.0', '>= 8.0.0'
 # Postgres database for Active Record
 gem 'pg', '~> 1.2'
 # Use Puma as the app server
-gem 'puma', '~> 6.0'
+gem 'puma', '>= 7.2.1'
 # Replace sassc with dartsass 02-08-26
 gem 'dartsass-rails', '~> 0.5.0'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
@@ -51,7 +51,7 @@ end
 group :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 3.26'
-  gem 'selenium-webdriver', '>= 4.0.0.rc1'
+  gem 'selenium-webdriver', '>= 4.14.0'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
 end
