@@ -2,7 +2,7 @@ services:
   web:
     container_name: community-exchange-web
     build: .
-    command: sh -lc "yarn install --frozen-lockfile && NODE_OPTIONS=--openssl-legacy-provider bundle exec rails webpacker:compile && bundle exec rails s -b '0.0.0.0'"
+    command: sh -lc "npm ci && (npm exec vite -- --host 0.0.0.0 --port 3036 &) && bundle exec rails s -b '0.0.0.0'"
     environment:
       RAILS_ENV: development
       DB_HOST: db

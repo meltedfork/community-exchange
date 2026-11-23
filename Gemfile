@@ -11,10 +11,8 @@ gem 'pg', '~> 1.2'
 gem 'puma', '>= 7.2.1'
 # Replace sassc with dartsass 02-08-26
 gem 'dartsass-rails', '~> 0.5.0'
-# Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
-gem 'webpacker', '~> 5.0'
-# Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
-gem 'turbolinks', '~> 5'
+# Integrate Vite with Rails
+gem 'vite_rails', '~> 3.0'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
 # mailchimp
