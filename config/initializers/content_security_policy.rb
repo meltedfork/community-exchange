@@ -20,7 +20,7 @@
     # Allow @vite/client to hot reload style changes in development
 #    policy.style_src *policy.style_src, :unsafe_inline if Rails.env.development?
 
-#   # If you are using webpack-dev-server then specify webpack-dev-server host
+#   # If you are using a frontend dev server, specify its HTTP/WS host here
 #   policy.connect_src :self, :https, "http://localhost:3035", "ws://localhost:3035" if Rails.env.development?
     # Allow @vite/client to hot reload changes in development
 #    policy.connect_src *policy.connect_src, "ws://#{ ViteRuby.config.host_with_port }" if Rails.env.development?
