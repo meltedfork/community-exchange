@@ -2,6 +2,8 @@
   "name": "community-exchange",
   "private": true,
   "scripts": {
+    "dev": "docker compose up --build",
+    "dev:down": "docker compose down",
     "audit:gems": "docker compose run --rm web sh -lc 'bundle install && bundle exec bundle-audit check --update'"
   },
   "dependencies": {
