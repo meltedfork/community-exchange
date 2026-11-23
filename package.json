@@ -11,7 +11,8 @@
     "build": "vite build",
     "dev": "docker compose up --build",
     "dev:down": "docker compose down --volumes --remove-orphans",
-    "dev:restart": "npm run dev:down && npm run dev"
+    "dev:restart": "npm run dev:down && rm -f tmp/pids/server.pid && npm run dev",
+    "dev:stop": "npm run dev:down"
   },
   "dependencies": {
     "@vitejs/plugin-react": "^5.0.4",
