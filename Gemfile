@@ -29,6 +29,7 @@ gem 'gibbon'
 gem 'propshaft', '~> 0.8.0'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
+gem 'json', '~> 2.19', '>= 2.19.9'
 
 group :development, :test do
   gem 'bundler-audit', require: false

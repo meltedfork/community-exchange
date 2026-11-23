@@ -2,9 +2,12 @@
   "name": "community-exchange",
   "private": true,
   "scripts": {
+    "audit": "npm run audit:gems && npm run audit:js",
+    "audit:gems": "docker compose run --rm web sh -lc 'bundle install && bundle exec bundle-audit check --update'",
+    "audit:js": "docker compose run --rm web yarn audit --groups dependencies",
     "dev": "docker compose up --build",
-    "dev:down": "docker compose down",
-    "audit:gems": "docker compose run --rm web sh -lc 'bundle install && bundle exec bundle-audit check --update'"
+    "dev:down": "docker compose down --volumes --remove-orphans",
+    "dev:restart": "npm run dev:down && npm run dev"
   },
   "dependencies": {
     "@babel/core": "^7.26.0",

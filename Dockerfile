@@ -21,18 +21,17 @@ RUN apt-get update && apt-get install -y --no-install-recommends nodejs yarn
 WORKDIR /community-exchange
 
 # Copy the Gemfile and Gemfile.lock
-COPY Gemfile /community-exchange/Gemfile
-COPY Gemfile.lock /community-exchange/Gemfile.lock
+COPY Gemfile Gemfile.lock ./
 
 # Install Gems dependencies
 RUN gem install bundler && bundle install
-RUN yarn install
+
+# Copy package.json and yarn.lock before other application code
+COPY package.json yarn.lock ./
+RUN yarn install --frozen-lockfile
 
 # Copy the application code
-COPY . /community-exchange
-
-# Precompile assets (optional, if using Rails with assets)
-# RUN bundle exec rake assets:precompile
+COPY . .
 
 # Expose the port the app runs on
 EXPOSE 3000
