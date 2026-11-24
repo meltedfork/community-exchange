@@ -11,28 +11,25 @@ RUN apt-get update -qq && apt-get install -y \
   zlib1g-dev \
   build-essential
 
-# Install Yarn & Node v22.x
-RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg -o /root/yarn-pubkey.gpg && apt-key add /root/yarn-pubkey.gpg
-RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" > /etc/apt/sources.list.d/yarn.list
+# Install Node v22.x
 RUN curl -fsSL https://deb.nodesource.com/setup_22.x | bash -
-RUN apt-get update && apt-get install -y --no-install-recommends nodejs yarn
+RUN apt-get update && apt-get install -y --no-install-recommends nodejs
 
 # Set the working directory
 WORKDIR /community-exchange
 
 # Copy the Gemfile and Gemfile.lock
-COPY Gemfile /community-exchange/Gemfile
-COPY Gemfile.lock /community-exchange/Gemfile.lock
+COPY Gemfile Gemfile.lock ./
 
 # Install Gems dependencies
 RUN gem install bundler && bundle install
-RUN yarn install
+
+# Copy package.json and package-lock.json before other application code
+COPY package.json package-lock.json ./
+RUN npm ci
 
 # Copy the application code
-COPY . /community-exchange
-
-# Precompile assets (optional, if using Rails with assets)
-# RUN bundle exec rake assets:precompile
+COPY . .
 
 # Expose the port the app runs on
 EXPOSE 3000
