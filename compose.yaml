@@ -1,8 +1,9 @@
+name: community-exchange
+
 services:
   web:
-    container_name: community-exchange-web
     build: .
-    command: sh -lc "npm ci && (npm exec vite -- --host 0.0.0.0 --port 3036 &) && bundle exec rails s -b '0.0.0.0'"
+    command: sh bin/dev-web-start
     environment:
       RAILS_ENV: development
       DB_HOST: db
@@ -22,7 +23,6 @@ services:
 
   db:
     image: postgres:17-alpine
-    container_name: community-exchange-db
     volumes:
       - postgres_data:/var/lib/postgresql/data
     environment:

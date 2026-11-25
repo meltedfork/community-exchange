@@ -100,7 +100,7 @@ body {
   color: var(--bs-body-color);
   text-align: var(--bs-body-text-align);
   background-color: var(--bs-body-bg);
-  background-image: url('art_supplies_bkgrd.png');
+  background-image: linear-gradient(135deg, rgba(11, 18, 32, 0.68) 0%, rgba(11, 18, 32, 0.56) 100%), var(--page-bg-url);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -10838,7 +10838,7 @@ html {
 
 .callout {
   padding: 15rem 0;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../assets/img/bg-callout.jpg");
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -10986,15 +10986,25 @@ footer.footer .social-link:hover {
 /* Landing page hero refresh to match split-card layout. */
 .navbar {
   --bs-bg-opacity: 1;
+  background-color: #ffffff;
   border-bottom: 1px solid;
   border-bottom-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity)) !important;
+}
+
+.navbar .nav-link {
+  color: #0f172a;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+  color: var(--bs-primary);
 }
 
 .masthead {
   min-height: 34rem;
   padding-top: 8rem;
   padding-bottom: 7rem;
-  background: linear-gradient(120deg, rgba(11, 18, 32, 0.78) 0%, rgba(11, 18, 32, 0.64) 100%);
+  background: linear-gradient(120deg, rgba(11, 18, 32, 0.58) 0%, rgba(11, 18, 32, 0.48) 100%);
 }
 
 .hero-shell {
@@ -11043,7 +11053,8 @@ footer.footer .social-link:hover {
 }
 
 .hero-image {
-  background-image: url('art_supplies_bkgrd.png');
+  background-color: #1b2738;
+  background-image: linear-gradient(140deg, rgba(17, 24, 39, 0.08) 0%, rgba(17, 24, 39, 0.18) 100%), var(--page-bg-url);
   background-repeat: no-repeat;
   background-size: 130% auto;
   border-radius: 1.1rem;

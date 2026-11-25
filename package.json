@@ -9,7 +9,7 @@
     "audit:gems": "docker compose run --rm web sh -lc 'bundle install && bundle exec bundle-audit check --update'",
     "audit:npm": "docker compose run --rm web sh -lc 'npm audit --package-lock-only'",
     "build": "vite build",
-    "dev": "docker compose up --build",
+    "dev": "docker compose up --build --remove-orphans",
     "dev:down": "docker compose down --volumes --remove-orphans",
     "dev:restart": "npm run dev:stop && npm run dev",
     "dev:stop": "npm run --silent dev:down && rm -f tmp/pids/server.pid && npm run --silent print:green -- 'Dev services stopped; Rails PID cleared.' && npm run --silent postgres:check-port",
