@@ -10982,3 +10982,108 @@ footer.footer .social-link:hover {
   font-size: 2.25rem;
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
 }
+
+/* Landing page hero refresh to match split-card layout. */
+.navbar {
+  --bs-bg-opacity: 1;
+  border-bottom: 1px solid;
+  border-bottom-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity)) !important;
+}
+
+.masthead {
+  min-height: 34rem;
+  padding-top: 8rem;
+  padding-bottom: 7rem;
+  background: linear-gradient(120deg, rgba(11, 18, 32, 0.78) 0%, rgba(11, 18, 32, 0.64) 100%);
+}
+
+.hero-shell {
+  align-items: center;
+  background: rgba(18, 31, 46, 0.9);
+  --bs-bg-opacity: 1;
+  border: 5px solid rgba(var(--bs-primary-rgb), var(--bs-bg-opacity));
+  border-radius: 0;
+  display: grid;
+  gap: 2.5rem;
+  grid-template-columns: 1.05fr 0.95fr;
+  max-width: 1220px;
+  padding: 2rem;
+}
+
+.hero-copy {
+  color: #ffffff;
+  text-align: left;
+}
+
+.hero-copy .h1,
+.hero-copy h1 {
+  color: #ffffff;
+  font-size: clamp(2.6rem, 5vw, 5rem);
+  line-height: 1.02;
+  margin-bottom: 1.4rem;
+}
+
+.hero-copy h3 {
+  color: #d8e1ec;
+  font-size: clamp(1.15rem, 2.2vw, 2rem);
+  line-height: 1.35;
+  margin-bottom: 2rem;
+}
+
+.hero-copy .btn-primary {
+  border-radius: 2rem;
+  font-weight: 700;
+}
+
+.hero-images {
+  display: grid;
+  gap: 0.85rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 150px 220px;
+}
+
+.hero-image {
+  background-image: url('art_supplies_bkgrd.png');
+  background-repeat: no-repeat;
+  background-size: 130% auto;
+  border-radius: 1.1rem;
+}
+
+.hero-image-wide {
+  background-position: center 12%;
+  grid-column: 1 / span 2;
+}
+
+.hero-image-left {
+  background-position: left 72%;
+}
+
+.hero-image-right {
+  background-position: right 75%;
+}
+
+@media (max-width: 992px) {
+  .hero-shell {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+  }
+
+  .hero-copy {
+    text-align: center;
+  }
+
+  .hero-images {
+    grid-template-rows: 120px 160px;
+  }
+}
+
+@media (max-width: 576px) {
+  .masthead {
+    padding-top: 6.2rem;
+    padding-bottom: 5rem;
+  }
+
+  .hero-images {
+    display: none;
+  }
+}
