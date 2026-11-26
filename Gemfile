@@ -54,3 +54,5 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 # updated platform to :windows
 gem 'tzinfo-data', platforms: [:windows, :jruby]
+
+gem "inertia_rails", "~> 3.24"
