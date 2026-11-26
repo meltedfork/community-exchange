@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <title>Community Exchange</title>
+    <%= favicon_link_tag asset_path('favicon.ico') %>
+    <%= vite_client_tag %>
+    <%= vite_react_refresh_tag %>
+    <%= vite_javascript_tag 'site.jsx' %>
+  </head>
+  <body>
+    <%= yield %>
+  </body>
+</html>
