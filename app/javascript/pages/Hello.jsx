@@ -3,6 +3,7 @@ export default function Hello({ message, server_time }) {
     <main>
       <h1>{message}</h1>
       <p>Rendered by React. Rails sent this at {server_time}.</p>
+      <a href="/" className="nb-button orange">Go to Home</a>
     </main>
   )
 }
