@@ -1,5 +1,85 @@
 /* Uses shared tokens from app/javascript/styles/theme.css */
 
+.home-navbar {
+  background: #ffffff;
+  border: 0;
+  border-top: 3px solid var(--ink);
+  border-bottom: 3px solid var(--primary);
+  box-shadow: none;
+  padding: 0.6rem 1rem;
+  position: relative;
+}
+
+.home-navbar .nb-navbar-row {
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.home-brand-link {
+  display: inline-flex;
+  text-decoration: none;
+}
+
+.home-brand-logo {
+  display: block;
+  height: 58px;
+  width: auto;
+}
+
+.home-navbar .nb-navbar-toggle {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  color: #1d2434;
+  font-size: 2rem;
+  line-height: 1;
+  padding: 0.1rem 0.25rem;
+}
+
+.home-navbar .nb-navbar-menu {
+  justify-content: center;
+}
+
+.home-navbar .nb-navbar-menu a {
+  color: #1b2438;
+  font-size: clamp(1.35rem, 1.8vw, 2rem);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.home-navbar .nb-navbar-menu a:hover,
+.home-navbar .nb-navbar-menu a:focus {
+  color: var(--primary-dark);
+}
+
+.home-navbar .home-nav-icon {
+  align-items: center;
+  border: 2px solid currentColor;
+  border-radius: 0.45rem;
+  display: inline-flex;
+  font-size: 1.4rem;
+  justify-content: center;
+  line-height: 1;
+  min-height: 2.2rem;
+  min-width: 2.2rem;
+  padding: 0;
+  text-decoration: none;
+}
+
+@media (min-width: 900px) {
+  .home-navbar {
+    min-height: 82px;
+  }
+
+  .home-navbar .nb-navbar-menu {
+    left: 50%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
 .hero {
   max-width: 1200px;
   margin: 0 auto;
@@ -200,14 +280,129 @@
   min-width: 220px;
 }
 
+.participate-section {
+  background: var(--primary);
+  padding: 5rem 1.5rem 6rem;
+}
+
+.participate-inner {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.participate-section h2 {
+  color: #ffffff;
+  font-size: clamp(2.2rem, 3.8vw, 3.6rem);
+  margin: 0 0 3rem;
+  text-align: center;
+}
+
+.participate-grid {
+  display: grid;
+  gap: 1.75rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.participate-item {
+  text-align: left;
+}
+
+.participate-card {
+  background: #ffffff;
+  height: 100%;
+  transform: rotate(-1deg);
+}
+
+.participate-item:nth-child(even) .participate-card {
+  transform: rotate(1deg);
+}
+
+.participate-link {
+  color: var(--ink);
+  display: block;
+  padding: 0.6rem;
+  text-decoration: none;
+}
+
+.participate-link:hover h3,
+.participate-link:focus h3 {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.participate-icon {
+  align-items: center;
+  background: var(--secondary);
+  border: 3px solid var(--ink);
+  box-shadow: 3px 3px 0 var(--ink);
+  color: var(--ink);
+  display: inline-flex;
+  font-size: 2.2rem;
+  height: 4.25rem;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  width: 4.25rem;
+}
+
+.participate-item h3 {
+  color: var(--ink);
+  font-size: clamp(1.25rem, 1.6vw, 1.6rem);
+  margin: 0 0 0.7rem;
+}
+
+.participate-item p {
+  color: #39414a;
+  font-size: clamp(1rem, 1.2vw, 1.1rem);
+  line-height: 1.35;
+  margin: 0;
+}
+
 /* Phones: stack and calm the collage down */
 @media (max-width: 700px) {
+  .home-brand-logo {
+    height: 48px;
+  }
+
+  .home-navbar .nb-navbar-menu {
+    margin-top: 0.65rem;
+    justify-content: start;
+  }
+
+  .home-navbar .nb-navbar-menu a {
+    display: inline-block;
+    font-size: 1.2rem;
+  }
+
+  .home-navbar .home-nav-icon {
+    min-height: 2rem;
+    min-width: 2rem;
+  }
+
   .hero { padding-top: 2.5rem; }
   .hero-collage { min-height: 340px; }
   .hero-photo-1 { width: 62%; height: 170px; }
   .hero-photo-2 { width: 44%; height: 130px; }
   .hero-photo-3 { width: 52%; height: 150px; }
   .hero-block { display: none; }
+
+  .participate-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .participate-icon {
+    height: 4rem;
+    width: 4rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .participate-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

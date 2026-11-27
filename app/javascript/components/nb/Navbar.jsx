@@ -4,6 +4,8 @@ export default function Navbar({
   brand,
   items = [],
   className = '',
+  toggleLabel = 'Menu',
+  toggleAriaLabel = 'Toggle navigation',
 }) {
   const [open, setOpen] = useState(false)
 
@@ -27,16 +29,21 @@ export default function Navbar({
           className="nb-navbar-toggle"
           aria-expanded={open}
           aria-controls="nb-navbar-menu"
-          aria-label="Toggle navigation"
+          aria-label={toggleAriaLabel}
           onClick={() => setOpen((prev) => !prev)}
         >
-          Menu
+          {toggleLabel}
         </button>
       </div>
       <ul id="nb-navbar-menu" className={`nb-navbar-menu${open ? ' is-open' : ''}`}>
         {items.map((item) => (
-          <li key={item.href}>
-            <a href={item.href} aria-current={item.current ? 'page' : undefined}>
+          <li key={item.href} className={item.itemClassName}>
+            <a
+              href={item.href}
+              aria-current={item.current ? 'page' : undefined}
+              aria-label={item.ariaLabel}
+              className={item.linkClassName}
+            >
               {item.label}
             </a>
           </li>
