@@ -18,7 +18,7 @@ export default function Home() {
             <p className="hero-tagline">
               Supporting Creativity and Connecting our Community
             </p>
-            <a href="#more-info" className="nb-button orange hero-cta">
+            <a href="#more-info" className="nb-button primary hero-cta">
               Find Out More
             </a>
           </div>

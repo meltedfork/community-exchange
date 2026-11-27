@@ -1,4 +1,5 @@
 import 'neobrutalismcss'
+import '~/styles/theme.css'
 import '../components/nb/styles.css'
 import { createInertiaApp } from '@inertiajs/react'
 import { createRoot } from 'react-dom/client'

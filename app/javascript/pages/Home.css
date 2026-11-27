@@ -1,21 +1,4 @@
-:root {
-  --paper: #fff8ec;
-  --ink: #111;
-  --yellow: #f4b942;
-  --orange: #e8603c;
-  --blue: #4a8fe7;
-  --green: #2ec27e;
-  --pink: #ff6fae;
-  --border: 3px solid var(--ink);
-  --shadow: 6px 6px 0 var(--ink);
-}
-
-body {
-  margin: 0;
-  background: var(--paper);
-  color: var(--ink);
-  font-family: system-ui, sans-serif;
-}
+/* Uses shared tokens from app/javascript/styles/theme.css */
 
 .hero {
   max-width: 1200px;
@@ -37,14 +20,15 @@ body {
 
 .hero-sticker {
   margin: 0;
-  background: var(--blue);
-  color: #fff;
+  background: var(--secondary-dark);
+  color: #ffffff;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: .05em;
   padding: .4rem .9rem;
   border: var(--border);
   box-shadow: 3px 3px 0 var(--ink);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
   transform: rotate(-3deg);
 }
 
@@ -143,14 +127,14 @@ body {
 }
 .hero-block-yellow {
   width: 120px; height: 120px;
-  background: var(--orange);
+  background: var(--yellow);
   top: 38%; right: 2%;
   border-radius: 50%;
   z-index: 1;
 }
 .hero-block-blue {
   width: 140px; height: 90px;
-  background: var(--blue);
+  background: var(--primary);
   top: 42%; left: 0; bottom: auto;
   transform: rotate(-8deg);
   z-index: 1;
