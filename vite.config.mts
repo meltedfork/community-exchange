@@ -4,6 +4,9 @@ import RubyPlugin from 'vite-plugin-ruby'
 
 export default defineConfig({
   plugins: [react(), RubyPlugin()],
+  css: {
+    postcss: {},
+  },
   server: {
     host: '0.0.0.0',
     port: 3036,
