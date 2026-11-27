@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   root 'pages#landing'
 
   get "hello", to: "hello#show"
+  get "home", to: "home#show"
 end
