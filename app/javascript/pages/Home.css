@@ -6,6 +6,7 @@
   border-top: 3px solid var(--ink);
   border-bottom: 3px solid var(--primary);
   box-shadow: none;
+  border-radius: 0 0 12px 12px;
   padding: 0.6rem 1rem;
   position: relative;
 }
@@ -55,7 +56,7 @@
 .home-navbar .home-nav-icon {
   align-items: center;
   border: 2px solid currentColor;
-  border-radius: 0.45rem;
+  border-radius: 0.75rem;
   display: inline-flex;
   font-size: 1.4rem;
   justify-content: center;
@@ -149,6 +150,7 @@
   background: #fff;
   padding: 10px;
   border: var(--border);
+  border-radius: 12px;
   box-shadow: var(--shadow);
 }
 
@@ -256,6 +258,7 @@
 .next-section-inner {
   background: #ffffff;
   border: var(--border);
+  border-radius: 16px;
   box-shadow: var(--shadow);
   margin: 0 auto;
   max-width: 980px;
@@ -275,6 +278,7 @@
 }
 
 .next-cta {
+  border-radius: 12px;
   font-size: 1.5rem;
   margin-top: 3rem;
   min-width: 220px;
@@ -312,6 +316,7 @@
 
 .participate-card {
   background: #ffffff;
+  border-radius: 14px;
   height: 100%;
   transform: rotate(-1deg);
 }
