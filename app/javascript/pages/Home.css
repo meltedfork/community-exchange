@@ -142,7 +142,7 @@
 
 .hero-block-green {
   width: 110px; height: 110px;
-  background: var(--green);
+  background: var(--accent-green);
   top: 18%; left: 10%;
   border-radius: 20px;
   transform: rotate(12deg);
@@ -151,7 +151,7 @@
 
 .hero-block-pink {
   width: 150px; height: 46px;
-  background: var(--pink);
+  background: var(--accent-pink);
   top: 61%; right: 12%;
   transform: rotate(-18deg);
   z-index: 1;
@@ -167,10 +167,37 @@
 }
 
 .next-section {
-  max-width: 1200px;
+  background: #ffffff;
+  margin: 0;
+  padding: 5rem 1.5rem;
+  text-align: center;
+}
+
+.next-section-inner {
+  background: #ffffff;
+  border: var(--border);
+  box-shadow: var(--shadow);
   margin: 0 auto;
-  padding: 4rem 1.5rem;
-  border-top: var(--border);
+  max-width: 980px;
+  padding: 3rem 2rem;
+}
+
+.next-section h2 {
+  font-size: clamp(2rem, 3.2vw, 3rem);
+  margin: 0 0 1.4rem;
+}
+
+.next-section p {
+  font-size: clamp(1.05rem, 1.7vw, 1.35rem);
+  line-height: 1.6;
+  margin: 0 auto;
+  max-width: 62ch;
+}
+
+.next-cta {
+  font-size: 1.5rem;
+  margin-top: 3rem;
+  min-width: 220px;
 }
 
 /* Phones: stack and calm the collage down */

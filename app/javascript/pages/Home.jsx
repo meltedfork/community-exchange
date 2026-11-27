@@ -45,7 +45,15 @@ export default function Home() {
         </section>
 
         <section id="more-info" className="next-section">
-          <h2>Free Art + Craft Supplies for Everyone!</h2>
+          <div className="next-section-inner">
+            <h2>Free Art + Craft Supplies for Everyone!</h2>
+            <p>
+              We are a community organization for sharing new and gently-used art and craft supplies to build community, spread creativity,
+              and encourage sustainability. All of the supplies are shared through community donations, and everyone is welcome to
+              participate, regardless of whether you donate.
+            </p>
+            <a href="#participate" className="nb-button primary next-cta">Join Us</a>
+          </div>
         </section>
       </main>
     </>
