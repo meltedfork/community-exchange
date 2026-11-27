@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   get 'pages/about'
   get 'pages/signup'
   root 'pages#landing'
+
+  get "hello", to: "hello#show"
 end
