@@ -101,7 +101,8 @@
 }
 
 .hero-sticker {
-  margin: 0;
+  /* negative bottom margin pulls the logo up under the sticker */
+  margin: 0 0 -6.5rem 4.5rem;
   background: var(--secondary-dark);
   color: #ffffff;
   font-weight: 800;
@@ -112,27 +113,67 @@
   box-shadow: 3px 3px 0 var(--ink);
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
   transform: rotate(-3deg);
+  /* sits on top of the jar and the top edge of the logo */
+  position: relative;
+  z-index: 2;
 }
 
 .hero-title {
   margin: 0;
-  font-size: clamp(2.75rem, 7vw, 5.5rem);
-  line-height: .95;
-  font-weight: 900;
-  letter-spacing: -.03em;
+  line-height: 0;
 }
 
-.hero-highlight {
-  background: var(--yellow);
-  padding: 0 .2em;
-  box-decoration-break: clone;
+/* Oversized jar behind the logo, so the logo reads like a sticker on the glass */
+#main {
+  overflow: clip; /* keeps the jar from spilling over the navbar or sideways */
+}
+
+.hero-jar {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  max-width: 420px;
+}
+
+/* The jar sits at the bottom of the text column, behind everything in it */
+.hero-copy {
+  position: relative;
+}
+
+.hero-copy::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  /* more negative = lower */
+  bottom: -75rem;
+  left: -22rem;
+  width: 63rem; /* jar size; height follows from aspect-ratio */
+  aspect-ratio: 1213 / 2300;
+  background: url('~/images/art_supplies_jar.png') center bottom / contain no-repeat;
+  transform: translateX(-8%);
+  pointer-events: none;
+}
+
+.hero-logo {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  filter: drop-shadow(6px 6px 0 var(--ink));
 }
 
 .hero-tagline {
-  margin: 0;
+  margin: 0.5rem 0 0;
   font-size: 1.35rem;
   font-weight: 600;
   max-width: 28ch;
+  background: #ffffff;
+  border: var(--border);
+  box-shadow: 4px 4px 0 var(--ink);
+  padding: 0.6rem 1rem;
+  transform: rotate(2deg);
+  position: relative;
+  z-index: 2;
 }
 
 .hero-cta {

@@ -8,6 +8,7 @@ import yarnBin from '~/images/yarn-bin.jpg'
 import './Home.css'
 import { Navbar } from '../components/nb'
 import navLogo from '~/images/art_supplies_logonav.png'
+import heroLogo from '~/images/art_supplies_logo.png'
 
 export default function Home({ events = [], past_events = [], participate_items = [] }) {
   return (
@@ -33,9 +34,17 @@ export default function Home({ events = [], past_events = [], participate_items 
         <section className="hero" aria-labelledby="hero-title">
           <div className="hero-copy">
             <p className="hero-sticker">Free art supplies</p>
-            <h1 id="hero-title" className="hero-title">
-              The Community <span className="hero-highlight">Exchange</span>
-            </h1>
+            <div className="hero-jar">
+              <h1 id="hero-title" className="hero-title">
+                <img
+                  src={heroLogo}
+                  alt="The Community Exchange"
+                  className="hero-logo"
+                  width="646"
+                  height="584"
+                />
+              </h1>
+            </div>
             <p className="hero-tagline">
               Supporting Creativity and Connecting our Community
             </p>
