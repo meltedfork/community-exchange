@@ -21,7 +21,7 @@ import {
   Table,
   Textarea,
   VisuallyHidden,
-} from '../components/nb'
+} from '~/components/nb'
 
 export default function Hello({ message, server_time }) {
   const [dialogOpen, setDialogOpen] = useState(false)

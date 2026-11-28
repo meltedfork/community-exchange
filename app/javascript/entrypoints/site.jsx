@@ -7,9 +7,10 @@ import { createRoot } from 'react-dom/client'
 
 createInertiaApp({
   resolve: (name) => {
-    const pages = import.meta.glob('../pages/**/*.jsx', { eager: true })
-    const page = pages[`../pages/${name}.jsx`]
-    if (!page) throw new Error(`Inertia page not found: app/javascript/pages/${name}.jsx`)
+    // Each page is a folder: render inertia: "Home" loads pages/Home/index.jsx
+    const pages = import.meta.glob('../pages/**/index.jsx', { eager: true })
+    const page = pages[`../pages/${name}/index.jsx`]
+    if (!page) throw new Error(`Inertia page not found: app/javascript/pages/${name}/index.jsx`)
     return page
   },
   setup({ el, App, props }) {
