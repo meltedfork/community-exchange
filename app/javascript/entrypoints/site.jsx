@@ -1,4 +1,5 @@
 import 'neobrutalismcss'
+import '@fontsource-variable/source-serif-4'
 import '~/styles/theme.css'
 import '../components/nb/styles.css'
 import { createInertiaApp } from '@inertiajs/react'

@@ -18,6 +18,7 @@
     "print:red": "sh -c 'printf \"\\033[31m%s\\033[0m\\n\" \"$*\"' --"
   },
   "dependencies": {
+    "@fontsource-variable/source-serif-4": "^5.3.1",
     "@inertiajs/react": "^3.11.0",
     "@vitejs/plugin-react": "^5.0.4",
     "neobrutalismcss": "^1.0.0",

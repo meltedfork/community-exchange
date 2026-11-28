@@ -9,7 +9,7 @@
   box-shadow: 5px 5px 0 var(--ink);
   transform: rotate(var(--tilt, -2deg));
   overflow: hidden;
-  font-family: Georgia, 'Times New Roman', serif;
+  font-family: var(--font-display);
   text-align: center;
 }
 
@@ -23,21 +23,21 @@
 .calendar-tile-month {
   margin-top: 0.6rem;
   font-size: 0.95rem;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
 .calendar-tile-day {
   font-size: 3.75rem;
-  font-weight: 700;
+  font-weight: 800;
   line-height: 1;
 }
 
 .calendar-tile-weekday {
   margin: 0.25rem 0 0.75rem;
   font-size: 0.8rem;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }

@@ -9,6 +9,9 @@
   --link: #B5451B;
   --link-hover: #8F3514;
 
+  /* Type */
+  --font-display: 'Source Serif 4 Variable', Georgia, serif;
+
   /* Base */
   --paper: #fff8ec;
   --ink: #111;

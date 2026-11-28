@@ -43,6 +43,7 @@
 
 .home-navbar .nb-navbar-menu a {
   color: #1b2438;
+  font-family: var(--font-display);
   font-size: clamp(1.35rem, 1.8vw, 2rem);
   font-weight: 800;
   text-decoration: none;

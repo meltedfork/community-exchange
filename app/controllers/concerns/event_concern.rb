@@ -6,7 +6,7 @@ module EventConcern
   EVENTS = [
     {
       id: "2026-12-05-crafty",
-      title: "Let's Get Crafty!",
+      title: "Free Art Supplies",
       description: "Get ready for a crafty winter. Pick up free yarn and art supplies for your holiday makes.",
       starts_at: "2026-12-05 14:00",
       ends_at: "2026-12-05 16:00",
