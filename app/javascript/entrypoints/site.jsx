@@ -5,13 +5,19 @@ import '../components/nb/styles.css'
 import { createInertiaApp } from '@inertiajs/react'
 import { createRoot } from 'react-dom/client'
 
+// Inertia pages, keyed by the name a controller renders:
+// render inertia: "Home" loads pages/Home/index.jsx.
+// Add a line here when you add a page folder.
+const pages = {
+  Home: () => import('../pages/Home/index.jsx'),
+  Hello: () => import('../pages/Hello/index.jsx'),
+}
+
 createInertiaApp({
   resolve: (name) => {
-    // Each page is a folder: render inertia: "Home" loads pages/Home/index.jsx
-    const pages = import.meta.glob('../pages/**/index.jsx', { eager: true })
-    const page = pages[`../pages/${name}/index.jsx`]
-    if (!page) throw new Error(`Inertia page not found: app/javascript/pages/${name}/index.jsx`)
-    return page
+    const load = pages[name]
+    if (!load) throw new Error(`Inertia page "${name}" is not listed in app/javascript/entrypoints/site.jsx`)
+    return load()
   },
   setup({ el, App, props }) {
     createRoot(el).render(<App {...props} />)

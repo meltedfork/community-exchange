@@ -13,6 +13,10 @@
     "dev:down": "docker compose down --volumes --remove-orphans",
     "dev:restart": "npm run dev:stop && npm run dev",
     "dev:stop": "npm run --silent dev:down && rm -f tmp/pids/server.pid && npm run --silent print:green -- 'Dev services stopped; Rails PID cleared.' && npm run --silent postgres:check-port",
+    "docker:exec": "docker compose exec web",
+    "docker:sh": "npm run --silent docker:exec -- sh",
+    "rails:console": "npm run --silent docker:exec -- bin/rails console",
+    "rails:routes": "npm run --silent docker:exec -- bin/rails routes",
     "postgres:check-port": "sh -lc 'if lsof -i:5432 >/dev/null 2>&1; then npm run --silent print:red -- \"Local PostgreSQL port 5432 is still in use:\"; lsof -i:5432; else npm run --silent print:green -- \"Local PostgreSQL port 5432 is free.\"; fi'",
     "print:green": "sh -c 'printf \"\\033[32m%s\\033[0m\\n\" \"$*\"' --",
     "print:red": "sh -c 'printf \"\\033[31m%s\\033[0m\\n\" \"$*\"' --"
