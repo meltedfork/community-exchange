@@ -1,0 +1,43 @@
+.calendar-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 130px;
+  flex-shrink: 0;
+  background: #fdfaf3;
+  border: var(--border);
+  box-shadow: 5px 5px 0 var(--ink);
+  transform: rotate(var(--tilt, -2deg));
+  overflow: hidden;
+  font-family: Georgia, 'Times New Roman', serif;
+  text-align: center;
+}
+
+.calendar-tile-binding {
+  align-self: stretch;
+  height: 18px;
+  background: var(--primary);
+  border-bottom: var(--border);
+}
+
+.calendar-tile-month {
+  margin-top: 0.6rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.calendar-tile-day {
+  font-size: 3.75rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.calendar-tile-weekday {
+  margin: 0.25rem 0 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}

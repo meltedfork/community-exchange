@@ -1,5 +1,6 @@
 import { Head } from '@inertiajs/react'
-import { Card } from '../components/nb'
+import CalendarTile from '~/components/CalendarTile'
+import ParticipateSection from '~/components/ParticipateSection'
 import heroPhoto from '~/images/art_supplies_bkgrd.png'
 import swapTable from '~/images/swap-table.jpg'
 import yarnBin from '~/images/yarn-bin.jpg'
@@ -7,35 +8,7 @@ import './Home.css'
 import { Navbar } from '../components/nb'
 import navLogo from '~/images/art_supplies_logonav.png'
 
-const participateItems = [
-  {
-    href: '#next-event',
-    icon: '📍',
-    title: 'Attend an Exchange',
-    text: 'Find new-to-you supplies!',
-  },
-  {
-    href: '#donations',
-    icon: '♡',
-    title: 'Donate Supplies',
-    text: "Donate items you don't use",
-  },
-  {
-    href: 'https://www.paypal.com/pool/9g3mvR5vom',
-    icon: '$',
-    title: 'Donate Funds',
-    text: 'Financially support The Community Exchange',
-    external: true,
-  },
-  {
-    href: '#faqs',
-    icon: '?',
-    title: 'FAQs',
-    text: 'I have a question...',
-  },
-]
-
-export default function Home() {
+export default function Home({ events = [], participate_items = [] }) {
   return (
     <>
       <Head title="The Community Exchange" />
@@ -91,6 +64,17 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="next-section" aria-labelledby="events-title">
+          <div className="next-section-inner">
+            <h2 id="events-title">Upcoming Free Events</h2>
+            <div style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap', justifyContent: 'center' }}>
+              {events.map((event, i) => (
+                <CalendarTile key={event.id} startsAt={event.starts_at} tilt={i % 2 ? 2 : -2} />
+              ))}
+            </div>
+          </div>
+        </section>
+
         <section id="more-info" className="next-section">
           <div className="next-section-inner">
             <h2>Free Art + Craft Supplies for Everyone!</h2>
@@ -103,28 +87,8 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="participate" className="participate-section" aria-labelledby="participate-title">
-          <div className="participate-inner">
-            <h2 id="participate-title">How To Participate</h2>
-            <ul className="participate-grid">
-              {participateItems.map((item) => (
-                <li className="participate-item" key={item.title}>
-                  <Card className="participate-card">
-                    <a
-                      href={item.href}
-                      className="participate-link"
-                      {...(item.external ? { target: '_blank', rel: 'noreferrer' } : {})}
-                    >
-                      <span className="participate-icon" aria-hidden="true">{item.icon}</span>
-                      <h3>{item.title}</h3>
-                      <p>{item.text}</p>
-                    </a>
-                  </Card>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
+        <ParticipateSection items={participate_items} />
+
       </main>
     </>
   )
