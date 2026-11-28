@@ -66,15 +66,35 @@ module EventConcern
     }
   ].freeze
 
+  PAST_EVENTS_LIMIT = 6
+
   private
 
   def upcoming_events
-    zone = Time.find_zone!(TIME_ZONE)
-
-    EVENTS
-      .map { |event| event.merge(starts_at: zone.parse(event[:starts_at]), ends_at: zone.parse(event[:ends_at])) }
+    parsed_events
       .select { |event| event[:ends_at] >= Time.current }
       .sort_by { |event| event[:starts_at] }
-      .map { |event| event.merge(starts_at: event[:starts_at].iso8601, ends_at: event[:ends_at].iso8601) }
+      .map { |event| serialize_event(event) }
+  end
+
+  # Most recent first, capped so the page doesn't grow forever
+  def past_events
+    parsed_events
+      .select { |event| event[:ends_at] < Time.current }
+      .sort_by { |event| event[:starts_at] }
+      .reverse
+      .first(PAST_EVENTS_LIMIT)
+      .map { |event| serialize_event(event) }
+  end
+
+  def parsed_events
+    zone = Time.find_zone!(TIME_ZONE)
+    EVENTS.map do |event|
+      event.merge(starts_at: zone.parse(event[:starts_at]), ends_at: zone.parse(event[:ends_at]))
+    end
+  end
+
+  def serialize_event(event)
+    event.merge(starts_at: event[:starts_at].iso8601, ends_at: event[:ends_at].iso8601)
   end
 end

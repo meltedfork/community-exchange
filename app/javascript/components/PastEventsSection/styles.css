@@ -1,0 +1,91 @@
+.past-events-section {
+  border-top: var(--border);
+  padding: 4rem 1.5rem 5rem;
+}
+
+.past-events-inner {
+  margin: 0 auto;
+  max-width: 1120px;
+}
+
+.past-events-section h2 {
+  color: var(--ink);
+  font-size: clamp(1.75rem, 2.6vw, 2.4rem);
+  margin: 0 0 0.5rem;
+  text-align: center;
+}
+
+.past-events-intro {
+  color: #4b5563;
+  font-size: 1.15rem;
+  margin: 0 0 2.5rem;
+  text-align: center;
+}
+
+.past-events-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Quieter than upcoming cards: dashed border, no hard shadow, no buttons */
+.past-event-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  height: 100%;
+  box-sizing: border-box;
+  background: #fffdf8;
+  border: 3px dashed var(--ink);
+  border-radius: 14px;
+  padding: 1.5rem 1.25rem;
+}
+
+/* Smaller, faded calendar page */
+.past-event-card .calendar-tile {
+  width: 96px;
+  box-shadow: 3px 3px 0 var(--ink);
+  filter: grayscale(1);
+  opacity: 0.85;
+}
+
+.past-event-card .calendar-tile-binding { height: 12px; }
+.past-event-card .calendar-tile-month { font-size: 0.75rem; margin-top: 0.4rem; }
+.past-event-card .calendar-tile-day { font-size: 2.6rem; }
+.past-event-card .calendar-tile-weekday { font-size: 0.65rem; margin-bottom: 0.5rem; }
+
+.past-event-body {
+  min-width: 0;
+}
+
+.past-event-body h3 {
+  font-size: 1.25rem;
+  margin: 0 0 0.35rem;
+}
+
+.past-event-desc {
+  color: #374151;
+  line-height: 1.4;
+  margin: 0 0 0.6rem;
+}
+
+.past-event-meta {
+  color: #4b5563;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.past-event-meta span {
+  display: block;
+  font-weight: 400;
+}
+
+@media (max-width: 520px) {
+  .past-events-grid {
+    grid-template-columns: 1fr;
+  }
+}

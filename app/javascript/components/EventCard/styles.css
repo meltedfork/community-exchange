@@ -1,0 +1,166 @@
+.event-card {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 2.5rem;
+  background: #ffffff;
+  border: var(--border);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  padding: 2.25rem 2.25rem 2rem;
+  text-align: left;
+}
+
+.event-card-featured {
+  margin-top: 0.75rem;
+}
+
+.event-next-up {
+  position: absolute;
+  top: -1.1rem;
+  left: 1.5rem;
+  margin: 0;
+  background: var(--primary);
+  border: var(--border);
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  padding: 0.15rem 0.7rem;
+  text-transform: uppercase;
+  transform: rotate(-3deg);
+}
+
+.event-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.event-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.event-title {
+  margin: 0;
+  font-size: clamp(1.6rem, 2.4vw, 2.2rem);
+  letter-spacing: 0.01em;
+  line-height: 1.15;
+  text-transform: uppercase;
+}
+
+.event-free {
+  flex-shrink: 0;
+  background: var(--secondary);
+  border: var(--border);
+  box-shadow: 3px 3px 0 var(--ink);
+  font-weight: 900;
+  font-size: 1.15rem;
+  letter-spacing: 0.06em;
+  padding: 0.3rem 0.85rem;
+  text-transform: uppercase;
+  transform: rotate(4deg);
+}
+
+.event-desc {
+  margin: 0.7rem 0 1.4rem;
+  color: #374151;
+  font-size: 1.3rem;
+  line-height: 1.45;
+}
+
+.event-meta {
+  display: grid;
+  gap: 0.8rem;
+  list-style: none;
+  margin: 0 0 1.75rem;
+  padding: 0;
+}
+
+.event-meta li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.event-meta svg {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  margin-top: 0.1rem;
+  color: var(--primary-dark);
+}
+
+.event-meta-sub {
+  display: block;
+  color: #4b5563;
+  font-weight: 400;
+}
+
+.event-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.event-button-secondary {
+  background: #ffffff;
+  border: var(--border);
+  box-shadow: var(--shadow);
+  color: var(--ink);
+  cursor: pointer;
+  font: inherit;
+  font-size: 1.1rem;
+  font-weight: 800;
+  padding: 0.6rem 1.15rem;
+}
+
+.event-button-secondary:hover {
+  background: var(--paper);
+  box-shadow: 4px 4px 0 var(--ink);
+}
+
+/* Bigger calendar page inside event cards */
+.event-card .calendar-tile {
+  width: 160px;
+}
+
+.event-card .calendar-tile-binding {
+  height: 22px;
+}
+
+.event-card .calendar-tile-month {
+  font-size: 1.1rem;
+}
+
+.event-card .calendar-tile-day {
+  font-size: 4.75rem;
+}
+
+.event-card .calendar-tile-weekday {
+  font-size: 0.95rem;
+}
+
+.event-actions .nb-button.primary {
+  font-size: 1.1rem;
+  padding: 0.6rem 1.15rem;
+}
+
+/* Phones: calendar on top, buttons full width */
+@media (max-width: 640px) {
+  .event-card {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem 1.25rem 1.5rem;
+  }
+
+  .event-actions > * {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+}

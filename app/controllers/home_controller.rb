@@ -5,6 +5,7 @@ class HomeController < SiteController
   def show
     render inertia: "Home", props: {
       events: upcoming_events,
+      past_events: past_events,
       participate_items: participate_items
     }
   end

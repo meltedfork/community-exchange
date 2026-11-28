@@ -1,4 +1,4 @@
-import './CalendarTile.css'
+import './styles.css'
 
 const TZ = 'America/Chicago'
 const fmt = (date, options) =>

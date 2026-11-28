@@ -1,5 +1,6 @@
 import { Head } from '@inertiajs/react'
-import CalendarTile from '~/components/CalendarTile'
+import EventsSection from '~/components/EventsSection'
+import PastEventsSection from '~/components/PastEventsSection'
 import ParticipateSection from '~/components/ParticipateSection'
 import heroPhoto from '~/images/art_supplies_bkgrd.png'
 import swapTable from '~/images/swap-table.jpg'
@@ -8,7 +9,7 @@ import './Home.css'
 import { Navbar } from '../components/nb'
 import navLogo from '~/images/art_supplies_logonav.png'
 
-export default function Home({ events = [], participate_items = [] }) {
+export default function Home({ events = [], past_events = [], participate_items = [] }) {
   return (
     <>
       <Head title="The Community Exchange" />
@@ -64,16 +65,8 @@ export default function Home({ events = [], participate_items = [] }) {
           </div>
         </section>
 
-        <section className="next-section" aria-labelledby="events-title">
-          <div className="next-section-inner">
-            <h2 id="events-title">Upcoming Free Events</h2>
-            <div style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap', justifyContent: 'center' }}>
-              {events.map((event, i) => (
-                <CalendarTile key={event.id} startsAt={event.starts_at} tilt={i % 2 ? 2 : -2} />
-              ))}
-            </div>
-          </div>
-        </section>
+        <EventsSection events={events} />
+        <PastEventsSection events={past_events} />
 
         <section id="more-info" className="next-section">
           <div className="next-section-inner">

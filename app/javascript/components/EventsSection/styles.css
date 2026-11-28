@@ -1,0 +1,29 @@
+.events-section {
+  padding: 4.5rem 1.5rem 5.5rem;
+  scroll-margin-top: 1rem;
+}
+
+.events-inner {
+  margin: 0 auto;
+  max-width: 1120px;
+}
+
+.events-section h2 {
+  color: var(--ink);
+  font-size: clamp(2rem, 3.2vw, 3rem);
+  margin: 0 0 2.5rem;
+  text-align: center;
+}
+
+.events-list {
+  display: grid;
+  gap: 2.75rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.events-empty {
+  font-size: 1.15rem;
+  text-align: center;
+}

@@ -1,5 +1,5 @@
-import { Card, VisuallyHidden } from './nb'
-import './ParticipateSection.css'
+import { Card, VisuallyHidden } from '../nb'
+import './styles.css'
 
 const ICONS = {
   location: '📍',
